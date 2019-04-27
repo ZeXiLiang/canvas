@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+   
+    <div class="right" id="box"></div>
+    <header>
+      
+        <ul class="type" id="type">
+  <li data-type="dot">圆形</li>
+  <li data-type="column" class="selected ">柱状</li>
+        </ul>
+        <div class="ve">音量<input id="volume" type="range" min="0" max="100" value="60"> </div>
+      
+        <div class="song">
+          <ul id ="list">
+            <% music.forEach(function(name){ %>
+              <li title="<%= name %>"><%= name %></li>
+            <% })%>
+           
+           
+          </ul>
+        </div>
+      </header>
+      
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+  </body>
+</html>
